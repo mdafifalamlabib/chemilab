@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afif's Chemistry Lab</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Afif's Chemistry Lab</h1>
+        <h2>Interactive Chemistry Experiment Simulator</h2>
+
+        <!-- Chemical Search -->
+        <input type="text" id="searchChemical" class="form-control" placeholder="Search for chemicals..." oninput="displayChemicals(this.value.toLowerCase())">
+
+        <!-- List of Chemicals -->
+        <div id="chemicalList"></div>
+
+        <!-- Safety Information -->
+        <div id="safetyInfo"></div>
+
+        <!-- Beaker Section -->
+        <h4>Beaker</h4>
+        <div id="beaker">Drop Chemicals Here</div>
+
+        <!-- Thermometer and other tools -->
+        <div id="thermometer">🔥 Adjust Temperature</div>
+        <button onclick="checkReaction()">Start Reaction</button>
+
+        <!-- Result Box -->
+        <div id="resultBox"></div>
+
+        <!-- Add custom reaction button -->
+        <button id="addReaction">Add Custom Reaction</button>
+
+        <!-- New Test Button -->
+        <button id="newTest" onclick="resetLab()">New Test</button>
+
+        <!-- Download Reaction Log Button -->
+        <button id="downloadLog">Download Reaction Log</button>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
